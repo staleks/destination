@@ -1,0 +1,34 @@
+server:
+  port: 8181
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+
+filter.country: 0
+
+management:
+  security:
+    enabled: false
+
+---
+spring:
+  profiles: p1
+
+server:
+  port: 8181
+
+---
+spring:
+  profiles: p2
+
+server:
+  port: 8182
+
+---
+spring:
+  profiles: p3
+
+server:
+  port: 8183

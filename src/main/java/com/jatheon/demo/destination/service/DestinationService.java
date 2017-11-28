@@ -12,4 +12,10 @@ public interface DestinationService {
      */
     List<DestinationDTO> findAll();
 
+    /**
+     * @param destinationId
+     * @return
+     */
+    DestinationDTO findOne(Long destinationId);
+
 }

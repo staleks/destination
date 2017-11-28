@@ -40,6 +40,11 @@ public class DestinationServiceImpl implements DestinationService {
         }
     }
 
+    @Override
+    public DestinationDTO findOne(final Long destinationId) {
+        return mapFromEntity(destinationRepository.findOne(destinationId));
+    }
+
     /**
      *
      * @param entity

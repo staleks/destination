@@ -3,6 +3,7 @@ package com.jatheon.demo.destination.controller;
 import com.jatheon.demo.destination.model.dto.DestinationDTO;
 import com.jatheon.demo.destination.service.DestinationService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -19,6 +20,11 @@ public class DestinationController {
     @GetMapping("/")
     public List<DestinationDTO> getDestinations() {
         return destinationService.findAll();
+    }
+
+    @GetMapping("/{destinationId}")
+    public DestinationDTO getOneDestination(@PathVariable("destinationId")  Long destinationId) {
+        return destinationService.findOne(destinationId);
     }
 
 }
